@@ -25,7 +25,7 @@ class CryptoScreen extends StatefulWidget {
 
 class _CryptoScreenState extends State<CryptoScreen> {
   final String nonceHex =
-      '97f8927b36a46b3850578f68c726f4dbdfbd98129d7b78313d3d7ebe7fd5f5f6';
+      '6891702ed844695b6b90d7b212c055080bbfaf0d1e3380f6943755af4604d0dd';
   final int attempt = 4;
 
   // Replace with your actual PEM public key used in jsencrypt
@@ -87,6 +87,7 @@ yQIDAQAB
 
   @override
   Widget build(BuildContext context) {
+    debugPrint('Encrypted Base64: $_encryptedBase64');
     return Scaffold(
       appBar: AppBar(title: const Text("RSA Encryption (jsencrypt Compatible)")),
       body: Padding(
